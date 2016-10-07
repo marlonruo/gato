@@ -1,0 +1,1137 @@
+<!doctype html>
+<head>
+    <title>Gato</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+    
+    <script src="js/jquery-1.8.1.min.js" type="text/javascript"></script>
+    <script src="js/easing.js" type="text/javascript"></script>
+    <script src="js/transit.js"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript" ></script>
+    <script src="js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="dom-drag.js"></script>
+  
+</head>
+
+<body onLoad="$('#p1').delay(1000).fadeOut(600); $('#p2').delay(1000).fadeIn(600)">
+
+	<div id="todo">
+      <img src="imagenes/atras.png" style="position:absolute; bottom:0px;"/>
+      
+      <div id="p1" class="pag" style="display:block">
+        	<img src="imagenes/logo.png" class="centrar"/>
+      </div>
+        
+      <div id="p2" class="pag" style="display:none">
+        	<div style="width:100%; height:58px; top:0px; background:#3C3C3B; position:absolute">
+       	    	<img src="imagenes/loguito.png" class="centrar"/> 
+            </div>
+            <div style="width:100%; height:58px; bottom:0px; background:#3C3C3B; position:absolute; font-family:berLi; color:#FFFFFF; text-align:center; line-height:58px; font-size:32px;">
+            	En Seguros Argos queremos CRECER contigo
+            </div>
+        	<div style="width:38px; height:100%; left:0px; background:#3C3C3B; position:absolute"></div>
+        	<div style="width:38px; height:100%; right:0px; background:#3C3C3B; position:absolute"></div>
+        	<img src="imagenes/loguito2.png" style="position:absolute; right:90px; bottom:80px;"/> 
+            
+            <div id="op1" style="position:absolute; left:18%; top:20%; cursor:pointer">
+       	    	<img src="imagenes/gato.png" style="position:absolute"/>
+                <img src="imagenes/f1.png" style="position: absolute; left: 137px; top: 142px;"/> 
+                <img src="imagenes/f1.png" style="position: absolute; left: 267px; top: 31px;"/> 
+                <img src="imagenes/f1.png" style="position: absolute; left: 17px; top: 255px;"/> 
+                <img src="imagenes/f2.png" style="position: absolute; left: 255px; top: 264px;"/> 
+                <img src="imagenes/f2.png" style="position: absolute; left: 266px; top: 150px;"/> 
+                <img src="imagenes/f2.png" style="position: absolute; left: 24px; top: 131px;"/> 
+                <img src="imagenes/f2.png" style="position: absolute; left: 152px; top: 26px;"/> 
+                <img src="imagenes/linea.png" style="position: absolute; left: 14px; top: 25px;"/> 
+                <div style="position: absolute; width: 250px; height: 50px; color: #FFF9F9; background: #D13239; text-align: center; line-height: 50px; font-size: 30px; font-family: berLi; left: 40px; top: 389px;">Gato</div>
+            </div>
+            
+            
+            
+             <div id="op2" style="position:absolute; left:58%; top:20%; cursor:pointer">
+       	    	<img src="imagenes/c2.png" style="position: absolute; top: 80px;"/>
+                <img src="imagenes/c1.png" style="position: absolute; left: 70px; top: 111px;"/>
+                <div style="position: absolute; width: 250px; height: 50px; color: #FFF9F9; background: #D13239; text-align: center; line-height: 50px; font-size: 30px; font-family: berLi; left: 40px; top: 9px;">Memorama</div>
+        	</div>
+            
+            <script>
+            $('#op1').click(function(){
+				$('#p2').fadeOut(600)
+				$('#p3').fadeIn(600)
+			})
+			$('#op2').click(function(){
+				$('#p2').fadeOut(600)
+				$('#p4').fadeIn(600)
+			})
+			</script>
+            
+        </div>
+        
+        
+        
+        
+        <div id="p3" class="pag" style="display:none">
+        	<div style="width:100%; height:58px; top:0px; background:#3C3C3B; position:absolute">
+       	    	<img src="imagenes/loguito.png" class="centrar"/>
+                <div class="centrar_v" style="color:#FFFFFF; left:40px; font-size:22px;">Gato</div>
+                <div id="reg1" class="centrar_v" style="color:#FFFFFF; right:40px; font-size:22px; padding-left:20px; cursor:pointer"><img src="imagenes/reg.png" style="position:absolute; top:7px; left:0px;"/>Regresar al menu</div>
+            </div>
+            <div style="width:100%; height:58px; bottom:0px; background:#3C3C3B; position:absolute; font-family:berLi; color:#FFFFFF; text-align:center; line-height:58px; font-size:32px;">
+            	En Seguros Argos queremos CRECER contigo
+            </div>
+        	<div style="width:38px; height:100%; left:0px; background:#3C3C3B; position:absolute"></div>
+        	<div style="width:38px; height:100%; right:0px; background:#3C3C3B; position:absolute"></div>
+        	<img src="imagenes/loguito2.png" style="position:absolute; right:90px; bottom:80px;"/>
+            
+            <div style="position: absolute; top: 100px; left: 140px; color: #00833E; font-size: 24px; width: 155px;">Jugador 1</div>
+            <div style="position: absolute; top: 137px; left: 140px; background: #00833E; font-size: 24px; width: 145px; height: 1px;"></div>
+            <div style="position: absolute; top: 147px; left: 140px; color: #2B2B2B; font-size: 18px; width: 155px;">Arrastra la figura<br>al tablero</div>
+            
+            
+            <div style="position: absolute; top: 100px; left: 987px; color: #D13239; font-size: 24px; width: 155px;">Jugador 2</div>
+          <div style="position: absolute; top: 137px; left: 987px; background: #D13239; font-size: 24px; width: 145px; height: 1px;"></div>
+          <div style="position: absolute; top: 147px; left: 987px; color: #2B2B2B; font-size: 18px; width: 155px;">Arrastra la figura<br>al tablero</div>
+            
+            <img src="imagenes/gatote.png" style="position: absolute; left: 378px; top: 136px;"/>
+            
+            
+            <img src="imagenes/gris.png" style="position: absolute; left: 140px; top: 266px;"/>
+            <img src="imagenes/gris.png" style="position: absolute; left: 222px; top: 266px;"/>
+            <img src="imagenes/gris.png" style="position: absolute; left: 140px; top: 356px;"/>
+            <img src="imagenes/gris.png" style="position: absolute; left: 222px; top: 356px;"/>
+            <img src="imagenes/gris.png" style="position: absolute; left: 142px; top: 446px;"/>
+            
+            <img src="imagenes/gris.png" style="position: absolute; left: 987px; top: 266px;"/>
+            <img src="imagenes/gris.png" style="position: absolute; left: 1082px; top: 266px;"/>
+            <img src="imagenes/gris.png" style="position: absolute; left: 987px; top: 356px;"/>
+            <img src="imagenes/gris.png" style="position: absolute; left: 1082px; top: 356px;"/>
+            <img src="imagenes/gris.png" style="position: absolute; left: 987px; top: 446px;"/>
+            
+            
+            <img id="f1" src="imagenes/ficha1.png" style="position: absolute; left: 140px; top: 266px;"/>
+            <img id="f2" src="imagenes/ficha1.png" style="position: absolute; left: 222px; top: 266px;"/>
+            <img id="f3" src="imagenes/ficha1.png" style="position: absolute; left: 140px; top: 356px;"/>
+            <img id="f4" src="imagenes/ficha1.png" style="position: absolute; left: 222px; top: 356px;"/>
+            <img id="f5" src="imagenes/ficha1.png" style="position: absolute; left: 142px; top: 446px;"/>
+            
+            <img id="f1a" src="imagenes/ficha2.png" style="position: absolute; left: 987px; top: 266px;"/>
+            <img id="f2a" src="imagenes/ficha2.png" style="position: absolute; left: 1082px; top: 266px;"/>
+            <img id="f3a" src="imagenes/ficha2.png" style="position: absolute; left: 987px; top: 356px;"/>
+            <img id="f4a" src="imagenes/ficha2.png" style="position: absolute; left: 1082px; top: 356px;"/>
+            <img id="f5a" src="imagenes/ficha2.png" style="position: absolute; left: 987px; top: 446px;"/>
+            
+            <div id="bloquea1" style="position: absolute; width: 206px; height: 289px; top: 250px; left: 111px; display:none"></div>
+            <div id="bloquea2" style="position: absolute; width: 206px; height: 289px; top: 250px; left: 971px;"></div>
+            
+             
+             <img id="b1" src="imagenes/f1_gr.png" style="position: absolute; left: 417px; top: 179px; display:none"/>
+             <img id="b2" src="imagenes/f1_gr.png" style="position: absolute; left: 600px; top: 179px; display:none"/>
+             <img id="b3" src="imagenes/f1_gr.png" style="position: absolute; left: 780px; top: 179px; display:none"/>
+             <img id="b4" src="imagenes/f1_gr.png" style="position: absolute; left: 417px; top: 357px; display:none"/>
+             <img id="b5" src="imagenes/f1_gr.png" style="position: absolute; left: 600px; top: 357px; display:none"/>
+             <img id="b6" src="imagenes/f1_gr.png" style="position: absolute; left: 780px; top: 357px; display:none"/>
+             <img id="b7" src="imagenes/f1_gr.png" style="position: absolute; left: 417px; top: 544px; display:none"/>
+             <img id="b8" src="imagenes/f1_gr.png" style="position: absolute; left: 600px; top: 544px; display:none"/>
+             <img id="b9" src="imagenes/f1_gr.png" style="position: absolute; left: 780px; top: 544px; display:none"/>
+             
+             <img id="b1a" src="imagenes/f2_gr.png" style="position: absolute; left: 417px; top: 179px; display:none"/>
+             <img id="b2a" src="imagenes/f2_gr.png" style="position: absolute; left: 600px; top: 179px; display:none"/>
+             <img id="b3a" src="imagenes/f2_gr.png" style="position: absolute; left: 780px; top: 179px; display:none"/>
+             <img id="b4a" src="imagenes/f2_gr.png" style="position: absolute; left: 417px; top: 357px; display:none"/>
+             <img id="b5a" src="imagenes/f2_gr.png" style="position: absolute; left: 600px; top: 357px; display:none"/>
+             <img id="b6a" src="imagenes/f2_gr.png" style="position: absolute; left: 780px; top: 357px; display:none"/>
+             <img id="b7a" src="imagenes/f2_gr.png" style="position: absolute; left: 417px; top: 544px; display:none"/>
+             <img id="b8a" src="imagenes/f2_gr.png" style="position: absolute; left: 600px; top: 544px; display:none"/>
+             <img id="b9a" src="imagenes/f2_gr.png" style="position: absolute; left: 780px; top: 544px; display:none"/>
+             
+             <div id="con1" style="position: absolute; width: 100px; height: 100px; left: 414px; top: 172px;"></div>
+          <div id="con2" style="position: absolute; width: 100px; height: 100px; left: 598px; top: 175px;"></div>
+          <div id="con3" style="position: absolute; width: 100px; height: 100px; left: 780px; top: 174px;"></div>
+          <div id="con4" style="position: absolute; width: 100px; height: 100px; left: 413px; top: 350px;"></div>
+          <div id="con5" style="position: absolute; width: 100px; height: 100px; left: 599px; top: 353px;"></div>
+          <div id="con6" style="position: absolute; width: 100px; height: 100px; left: 777px; top: 354px;"></div>
+          <div id="con7" style="position: absolute; width: 100px; height: 100px; left: 414px; top: 540px;"></div>
+          <div id="con8" style="position: absolute; width: 100px; height: 100px; left: 600px; top: 538px;"></div>
+             <div id="con9" style="position: absolute; width: 100px; height: 100px; left: 777px; top: 540px;"></div>
+             
+             <img id="bien1" src="imagenes/bien.png" style="position: absolute; left: 347px; top: 206px; display:none"/>
+             <img id="bien2" src="imagenes/bien.png" style="position: absolute; left: 347px; top: 394px; display:none"/>
+             <img id="bien3" src="imagenes/bien.png" style="position: absolute; left: 347px; top: 576px; display:none"/>
+             
+             <img id="bien4" src="imagenes/bien2.png" style="position: absolute; left: 453px; top: 114px; display:none"/>
+             <img id="bien5" src="imagenes/bien2.png" style="position: absolute; left: 630px; top: 112px; display:none"/>
+             <img id="bien6" src="imagenes/bien2.png" style="position: absolute; left: 810px; top: 120px; display:none"/>
+             
+             <img id="bien7" src="imagenes/bien3.png" style="position: absolute; left: 433px; top: 183px; display:none"/>
+             <img id="bien8" src="imagenes/bien4.png" style="position: absolute; left: 433px; top: 183px; display:none"/>
+             
+             <img id="gan1" src="imagenes/gan1.png" style="position: absolute; left: 39px; top: 58px; display:none"/>
+             <img id="gan2" src="imagenes/gan2.png" style="position: absolute; left: 39px; top: 58px; display:none"/>
+             
+             <div id="gato" style="position:absolute; left:39px; top:58px; background-color:rgba(0,0,0,.8); width:1201px; height:687px; display:none">
+       	     	<img src="imagenes/gg.png"/> 
+             </div>
+            
+        </div>
+        
+        
+        
+    </div>
+
+  
+            
+            
+            <script>
+			var cas1=0
+			var cas2=0
+			var cas3=0
+			var cas4=0
+			var cas5=0
+			var cas6=0
+			var cas7=0
+			var cas8=0
+			var cas9=0
+			
+			var blo=2
+			var total = 0
+	
+			$(function() {
+           $( "#f1, #f2, #f3, #f4, #f5, #f1a, #f2a, #f3a, #f4a, #f5a").draggable({ containment: '#p3', revert: "valid",
+		  	start: function() {
+            	$(this).css( "z-index","10" );
+          	},
+        	stop: function() {
+                $(this).css('z-index', '0');
+        	}
+		  });
+
+          
+		  $( "#con1, #con2, #con3, #con4, #con5, #con6, #con7, #con8, #con9" ).droppable({  
+		    accept: "#f1, #f2, #f3, #f4, #f5, #f1a, #f2a, #f3a, #f4a, #f5a",
+			tolerance: "intersect",
+            drop: function( event, ui ) {
+				  //$(this).attr("id")=="con1" && ui.draggable.attr("id")=="arr1a"
+				  
+				  if($(this).attr("id")=="con1"){
+					 $('#con1').hide()
+					 if(ui.draggable.attr("id")=="f1"){$('#f1').fadeOut();$('#b1').fadeIn(); cas1=1}
+					 if(ui.draggable.attr("id")=="f2"){$('#f2').fadeOut();$('#b1').fadeIn(); cas1=1}
+					 if(ui.draggable.attr("id")=="f3"){$('#f3').fadeOut();$('#b1').fadeIn(); cas1=1}
+					 if(ui.draggable.attr("id")=="f4"){$('#f4').fadeOut();$('#b1').fadeIn(); cas1=1}
+					 if(ui.draggable.attr("id")=="f5"){$('#f5').fadeOut();$('#b1').fadeIn(); cas1=1}
+					 
+					 if(ui.draggable.attr("id")=="f1a"){$('#f1a').fadeOut();$('#b1a').fadeIn(); cas1=2}
+					 if(ui.draggable.attr("id")=="f2a"){$('#f2a').fadeOut();$('#b1a').fadeIn(); cas1=2}
+					 if(ui.draggable.attr("id")=="f3a"){$('#f3a').fadeOut();$('#b1a').fadeIn(); cas1=2}
+					 if(ui.draggable.attr("id")=="f4a"){$('#f4a').fadeOut();$('#b1a').fadeIn(); cas1=2}
+					 if(ui.draggable.attr("id")=="f5a"){$('#f5a').fadeOut();$('#b1a').fadeIn(); cas1=2}
+					 bloo()
+					 total++
+				  }
+				  if($(this).attr("id")=="con2"){
+					 $('#con2').hide()
+					 if(ui.draggable.attr("id")=="f1"){$('#f1').fadeOut();$('#b2').fadeIn(); cas2=1}
+					 if(ui.draggable.attr("id")=="f2"){$('#f2').fadeOut();$('#b2').fadeIn(); cas2=1}
+					 if(ui.draggable.attr("id")=="f3"){$('#f3').fadeOut();$('#b2').fadeIn(); cas2=1}
+					 if(ui.draggable.attr("id")=="f4"){$('#f4').fadeOut();$('#b2').fadeIn(); cas2=1}
+					 if(ui.draggable.attr("id")=="f5"){$('#f5').fadeOut();$('#b2').fadeIn(); cas2=1}
+					 
+					 if(ui.draggable.attr("id")=="f1a"){$('#f1a').fadeOut();$('#b2a').fadeIn(); cas2=2}
+					 if(ui.draggable.attr("id")=="f2a"){$('#f2a').fadeOut();$('#b2a').fadeIn(); cas2=2}
+					 if(ui.draggable.attr("id")=="f3a"){$('#f3a').fadeOut();$('#b2a').fadeIn(); cas2=2}
+					 if(ui.draggable.attr("id")=="f4a"){$('#f4a').fadeOut();$('#b2a').fadeIn(); cas2=2}
+					 if(ui.draggable.attr("id")=="f5a"){$('#f5a').fadeOut();$('#b2a').fadeIn(); cas2=2}
+					 bloo()
+					 total++
+				  }
+				  if($(this).attr("id")=="con3"){
+					 $('#con3').hide()
+					 if(ui.draggable.attr("id")=="f1"){$('#f1').fadeOut();$('#b3').fadeIn(); cas3=1}
+					 if(ui.draggable.attr("id")=="f2"){$('#f2').fadeOut();$('#b3').fadeIn(); cas3=1}
+					 if(ui.draggable.attr("id")=="f3"){$('#f3').fadeOut();$('#b3').fadeIn(); cas3=1}
+					 if(ui.draggable.attr("id")=="f4"){$('#f4').fadeOut();$('#b3').fadeIn(); cas3=1}
+					 if(ui.draggable.attr("id")=="f5"){$('#f5').fadeOut();$('#b3').fadeIn(); cas3=1}
+					 
+					 if(ui.draggable.attr("id")=="f1a"){$('#f1a').fadeOut();$('#b3a').fadeIn(); cas3=2}
+					 if(ui.draggable.attr("id")=="f2a"){$('#f2a').fadeOut();$('#b3a').fadeIn(); cas3=2}
+					 if(ui.draggable.attr("id")=="f3a"){$('#f3a').fadeOut();$('#b3a').fadeIn(); cas3=2}
+					 if(ui.draggable.attr("id")=="f4a"){$('#f4a').fadeOut();$('#b3a').fadeIn(); cas3=2}
+					 if(ui.draggable.attr("id")=="f5a"){$('#f5a').fadeOut();$('#b3a').fadeIn(); cas3=2}
+					 bloo()
+					 total++
+				  }
+				  
+				  if($(this).attr("id")=="con4"){
+					 $('#con4').hide()
+					 if(ui.draggable.attr("id")=="f1"){$('#f1').fadeOut();$('#b4').fadeIn(); cas4=1}
+					 if(ui.draggable.attr("id")=="f2"){$('#f2').fadeOut();$('#b4').fadeIn(); cas4=1}
+					 if(ui.draggable.attr("id")=="f3"){$('#f3').fadeOut();$('#b4').fadeIn(); cas4=1}
+					 if(ui.draggable.attr("id")=="f4"){$('#f4').fadeOut();$('#b4').fadeIn(); cas4=1}
+					 if(ui.draggable.attr("id")=="f5"){$('#f5').fadeOut();$('#b4').fadeIn(); cas4=1}
+					 
+					 if(ui.draggable.attr("id")=="f1a"){$('#f1a').fadeOut();$('#b4a').fadeIn(); cas4=2}
+					 if(ui.draggable.attr("id")=="f2a"){$('#f2a').fadeOut();$('#b4a').fadeIn(); cas4=2}
+					 if(ui.draggable.attr("id")=="f3a"){$('#f3a').fadeOut();$('#b4a').fadeIn(); cas4=2}
+					 if(ui.draggable.attr("id")=="f4a"){$('#f4a').fadeOut();$('#b4a').fadeIn(); cas4=2}
+					 if(ui.draggable.attr("id")=="f5a"){$('#f5a').fadeOut();$('#b4a').fadeIn(); cas4=2}
+					 bloo()
+					 total++
+				  }
+				  
+				  if($(this).attr("id")=="con5"){
+					 $('#con5').hide()
+					 if(ui.draggable.attr("id")=="f1"){$('#f1').fadeOut();$('#b5').fadeIn(); cas5=1}
+					 if(ui.draggable.attr("id")=="f2"){$('#f2').fadeOut();$('#b5').fadeIn(); cas5=1}
+					 if(ui.draggable.attr("id")=="f3"){$('#f3').fadeOut();$('#b5').fadeIn(); cas5=1}
+					 if(ui.draggable.attr("id")=="f4"){$('#f4').fadeOut();$('#b5').fadeIn(); cas5=1}
+					 if(ui.draggable.attr("id")=="f5"){$('#f5').fadeOut();$('#b5').fadeIn(); cas5=1}
+					 
+					 if(ui.draggable.attr("id")=="f1a"){$('#f1a').fadeOut();$('#b5a').fadeIn(); cas5=2}
+					 if(ui.draggable.attr("id")=="f2a"){$('#f2a').fadeOut();$('#b5a').fadeIn(); cas5=2}
+					 if(ui.draggable.attr("id")=="f3a"){$('#f3a').fadeOut();$('#b5a').fadeIn(); cas5=2}
+					 if(ui.draggable.attr("id")=="f4a"){$('#f4a').fadeOut();$('#b5a').fadeIn(); cas5=2}
+					 if(ui.draggable.attr("id")=="f5a"){$('#f5a').fadeOut();$('#b5a').fadeIn(); cas5=2}
+					 bloo()
+					 total++
+				  }
+				  
+				  if($(this).attr("id")=="con6"){
+					 $('#con6').hide()
+					 if(ui.draggable.attr("id")=="f1"){$('#f1').fadeOut();$('#b6').fadeIn(); cas6=1}
+					 if(ui.draggable.attr("id")=="f2"){$('#f2').fadeOut();$('#b6').fadeIn(); cas6=1}
+					 if(ui.draggable.attr("id")=="f3"){$('#f3').fadeOut();$('#b6').fadeIn(); cas6=1}
+					 if(ui.draggable.attr("id")=="f4"){$('#f4').fadeOut();$('#b6').fadeIn(); cas6=1}
+					 if(ui.draggable.attr("id")=="f5"){$('#f5').fadeOut();$('#b6').fadeIn(); cas6=1}
+					 
+					 if(ui.draggable.attr("id")=="f1a"){$('#f1a').fadeOut();$('#b6a').fadeIn(); cas6=2}
+					 if(ui.draggable.attr("id")=="f2a"){$('#f2a').fadeOut();$('#b6a').fadeIn(); cas6=2}
+					 if(ui.draggable.attr("id")=="f3a"){$('#f3a').fadeOut();$('#b6a').fadeIn(); cas6=2}
+					 if(ui.draggable.attr("id")=="f4a"){$('#f4a').fadeOut();$('#b6a').fadeIn(); cas6=2}
+					 if(ui.draggable.attr("id")=="f5a"){$('#f5a').fadeOut();$('#b6a').fadeIn(); cas6=2}
+					 bloo()
+					 total++
+				  }
+				  
+				  if($(this).attr("id")=="con7"){
+					 $('#con7').hide()
+					 if(ui.draggable.attr("id")=="f1"){$('#f1').fadeOut();$('#b7').fadeIn(); cas7=1}
+					 if(ui.draggable.attr("id")=="f2"){$('#f2').fadeOut();$('#b7').fadeIn(); cas7=1}
+					 if(ui.draggable.attr("id")=="f3"){$('#f3').fadeOut();$('#b7').fadeIn(); cas7=1}
+					 if(ui.draggable.attr("id")=="f4"){$('#f4').fadeOut();$('#b7').fadeIn(); cas7=1}
+					 if(ui.draggable.attr("id")=="f5"){$('#f5').fadeOut();$('#b7').fadeIn(); cas7=1}
+					 
+					 if(ui.draggable.attr("id")=="f1a"){$('#f1a').fadeOut();$('#b7a').fadeIn(); cas7=2}
+					 if(ui.draggable.attr("id")=="f2a"){$('#f2a').fadeOut();$('#b7a').fadeIn(); cas7=2}
+					 if(ui.draggable.attr("id")=="f3a"){$('#f3a').fadeOut();$('#b7a').fadeIn(); cas7=2}
+					 if(ui.draggable.attr("id")=="f4a"){$('#f4a').fadeOut();$('#b7a').fadeIn(); cas7=2}
+					 if(ui.draggable.attr("id")=="f5a"){$('#f5a').fadeOut();$('#b7a').fadeIn(); cas7=2}
+					 bloo()
+					 total++
+				  }
+				  
+				  if($(this).attr("id")=="con8"){
+					 $('#con8').hide()
+					 if(ui.draggable.attr("id")=="f1"){$('#f1').fadeOut();$('#b8').fadeIn(); cas8=1}
+					 if(ui.draggable.attr("id")=="f2"){$('#f2').fadeOut();$('#b8').fadeIn(); cas8=1}
+					 if(ui.draggable.attr("id")=="f3"){$('#f3').fadeOut();$('#b8').fadeIn(); cas8=1}
+					 if(ui.draggable.attr("id")=="f4"){$('#f4').fadeOut();$('#b8').fadeIn(); cas8=1}
+					 if(ui.draggable.attr("id")=="f5"){$('#f5').fadeOut();$('#b8').fadeIn(); cas8=1}
+					 
+					 if(ui.draggable.attr("id")=="f1a"){$('#f1a').fadeOut();$('#b8a').fadeIn(); cas8=2}
+					 if(ui.draggable.attr("id")=="f2a"){$('#f2a').fadeOut();$('#b8a').fadeIn(); cas8=2}
+					 if(ui.draggable.attr("id")=="f3a"){$('#f3a').fadeOut();$('#b8a').fadeIn(); cas8=2}
+					 if(ui.draggable.attr("id")=="f4a"){$('#f4a').fadeOut();$('#b8a').fadeIn(); cas8=2}
+					 if(ui.draggable.attr("id")=="f5a"){$('#f5a').fadeOut();$('#b8a').fadeIn(); cas8=2}
+					 bloo()
+					 total++
+				  }
+				  
+				  if($(this).attr("id")=="con9"){
+					 $('#con9').hide()
+					 if(ui.draggable.attr("id")=="f1"){$('#f1').fadeOut();$('#b9').fadeIn(); cas9=1}
+					 if(ui.draggable.attr("id")=="f2"){$('#f2').fadeOut();$('#b9').fadeIn(); cas9=1}
+					 if(ui.draggable.attr("id")=="f3"){$('#f3').fadeOut();$('#b9').fadeIn(); cas9=1}
+					 if(ui.draggable.attr("id")=="f4"){$('#f4').fadeOut();$('#b9').fadeIn(); cas9=1}
+					 if(ui.draggable.attr("id")=="f5"){$('#f5').fadeOut();$('#b9').fadeIn(); cas9=1}
+					 
+					 if(ui.draggable.attr("id")=="f1a"){$('#f1a').fadeOut();$('#b9a').fadeIn(); cas9=2}
+					 if(ui.draggable.attr("id")=="f2a"){$('#f2a').fadeOut();$('#b9a').fadeIn(); cas9=2}
+					 if(ui.draggable.attr("id")=="f3a"){$('#f3a').fadeOut();$('#b9a').fadeIn(); cas9=2}
+					 if(ui.draggable.attr("id")=="f4a"){$('#f4a').fadeOut();$('#b9a').fadeIn(); cas9=2}
+					 if(ui.draggable.attr("id")=="f5a"){$('#f5a').fadeOut();$('#b9a').fadeIn(); cas9=2}
+					 bloo()
+					 total++
+				  }
+				  
+				  
+				  
+				  
+				  if((cas1==1 && cas2==1 && cas3==1) || (cas1==2 && cas2==2 && cas3==2)){
+				  	$('#bien1').delay(500).fadeIn(800)
+					if(cas1==1){
+						$('#gan1').delay(1500).fadeIn(800)
+						$('#gan1').delay(1500).fadeOut(800)
+					}else{
+						$('#gan2').delay(1500).fadeIn(800)
+						$('#gan2').delay(1500).fadeOut(800)
+					}
+					setTimeout('rein()', 3800)
+				  }else if((cas4==1 && cas5==1 && cas6==1) || (cas4==2 && cas5==2 && cas6==2)){
+				  	$('#bien2').delay(500).fadeIn(800)
+					if(cas4==1){
+						$('#gan1').delay(1500).fadeIn(800)
+						$('#gan1').delay(1500).fadeOut(800)
+					}else{
+						$('#gan2').delay(1500).fadeIn(800)
+						$('#gan2').delay(1500).fadeOut(800)
+					}
+					setTimeout('rein()', 3800)
+				  }else if((cas7==1 && cas8==1 && cas9==1) || (cas7==2 && cas8==2 && cas9==2)){
+				  	$('#bien3').delay(500).fadeIn(800)
+					if(cas7==1){
+						$('#gan1').delay(1500).fadeIn(800)
+						$('#gan1').delay(1500).fadeOut(800)
+					}else{
+						$('#gan2').delay(1500).fadeIn(800)
+						$('#gan2').delay(1500).fadeOut(800)
+					}
+					setTimeout('rein()', 3800)
+				  }else if((cas1==1 && cas4==1 && cas7==1) || (cas1==2 && cas4==2 && cas7==2)){
+				  	$('#bien4').delay(500).fadeIn(800)
+					if(cas1==1){
+						$('#gan1').delay(1500).fadeIn(800)
+						$('#gan1').delay(1500).fadeOut(800)
+					}else{
+						$('#gan2').delay(1500).fadeIn(800)
+						$('#gan2').delay(1500).fadeOut(800)
+					}
+					setTimeout('rein()', 3800)
+				  }else if((cas2==1 && cas5==1 && cas8==1) || (cas2==2 && cas5==2 && cas8==2)){
+				  	$('#bien5').delay(500).fadeIn(800)
+					if(cas2==1){
+						$('#gan1').delay(1500).fadeIn(800)
+						$('#gan1').delay(1500).fadeOut(800)
+					}else{
+						$('#gan2').delay(1500).fadeIn(800)
+						$('#gan2').delay(1500).fadeOut(800)
+					}
+					setTimeout('rein()', 3800)
+				  }else if((cas3==1 && cas6==1 && cas9==1) || (cas3==2 && cas6==2 && cas9==2)){
+				  	$('#bien6').delay(500).fadeIn(800)
+					if(cas3==1){
+						$('#gan1').delay(1500).fadeIn(800)
+						$('#gan1').delay(1500).fadeOut(800)
+					}else{
+						$('#gan2').delay(1500).fadeIn(800)
+						$('#gan2').delay(1500).fadeOut(800)
+					}
+					setTimeout('rein()', 3800)
+				  }else if((cas1==1 && cas5==1 && cas9==1) || (cas1==2 && cas5==2 && cas9==2)){
+				  	$('#bien7').delay(500).fadeIn(800)
+					if(cas1==1){
+						$('#gan1').delay(1500).fadeIn(800)
+						$('#gan1').delay(1500).fadeOut(800)
+					}else{
+						$('#gan2').delay(1500).fadeIn(800)
+						$('#gan2').delay(1500).fadeOut(800)
+					}
+					setTimeout('rein()', 3800)
+				  }else if((cas3==1 && cas5==1 && cas7==1) || (cas3==2 && cas5==2 && cas7==2)){
+				  	$('#bien8').delay(500).fadeIn(800)
+					if(cas3==1){
+						$('#gan1').delay(1500).fadeIn(800)
+						$('#gan1').delay(1500).fadeOut(800)
+					}else{
+						$('#gan2').delay(1500).fadeIn(800)
+						$('#gan2').delay(1500).fadeOut(800)
+					}
+					setTimeout('rein()', 3800)
+				  }else if(total==9){
+				  	$('#gato').delay(1500).fadeIn(800)
+					$('#gato').delay(1500).fadeOut(800)
+					setTimeout('rein()', 3800)
+				  }
+				  
+				  function bloo(){
+					  if(blo==2){
+						$('#bloquea1').show()
+						$('#bloquea2').hide()
+						blo=1
+					  }else if(blo==1){
+						$('#bloquea2').show()
+						$('#bloquea1').hide()
+						blo=2
+					  }
+				  }
+				  
+            }
+          });
+		   $( "#p3" ).droppable({tolerance: "touch",drop: function( event, ui ) {}});
+        });	
+				
+		
+		
+		$('#reg1').click(function(){
+			$('#p2').fadeIn(600)
+			$('#p3').fadeOut(600)
+			rein()
+		})		
+			
+			function rein(){
+				total=0
+				cas1=0
+				cas2=0
+				cas3=0
+				cas4=0
+				cas5=0
+				cas6=0
+				cas7=0
+				cas8=0
+				cas9=0
+			
+				blo=2
+				
+				$('#f1, #f2, #f3, #f4, #f5, #f1a, #f2a, #f3a, #f4a, #f5a').fadeIn(600)
+				$('#bloquea1').hide()
+				$('#bloquea2').show()
+				
+				$('#b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8, #b9, #b1a, #b2a, #b3a, #b4a, #b5a, #b6a, #b7a, #b8a, #b9a').fadeOut(600)
+				
+				$('#con1, #con2, #con3, #con4, #con5, #con6, #con7, #con8, #con9').show()
+				
+				$('#bien1, #bien2, #bien3, #bien4, #bien5, #bien6, #bien7, #bien8').fadeOut(800)
+			}
+			
+	
+            
+            </script>
+            
+            
+            
+            
+<div id="p4" class="pag" style="display:none">
+            	<div style="width:100%; height:58px; top:0px; background:#3C3C3B; position:absolute">
+                    <img src="imagenes/loguito.png" class="centrar"/>
+                    <div class="centrar_v" style="color:#FFFFFF; left:40px; font-size:22px;">Memorama</div>
+                    <div id="reg2" class="centrar_v" style="color:#FFFFFF; right:40px; font-size:22px; padding-left:20px; cursor:pointer"><img src="imagenes/reg.png" style="position:absolute; top:7px; left:0px;"/>Regresar al menu</div>
+                </div>
+                <div style="width:100%; height:58px; bottom:0px; background:#3C3C3B; position:absolute; font-family:berLi; color:#FFFFFF; text-align:center; line-height:58px; font-size:32px;">
+                    En Seguros Argos queremos CRECER contigo
+                </div>
+                <div style="width:38px; height:100%; left:0px; background:#3C3C3B; position:absolute"></div>
+                <div style="width:38px; height:100%; right:0px; background:#3C3C3B; position:absolute"></div>
+                <img src="imagenes/loguito2.png" style="position:absolute; right:90px; bottom:80px;"/>
+                
+                <div  style="position:absolute; left:10%; top:20%">
+                    <img src="imagenes/c2.png" style="position: absolute; top: 131px; left: -39px;" width="180px"/>
+                    
+                    <img id="h1" src="imagenes/carta1a.png" style="position: absolute; left: 7px; top: 155px; margin-top:800px" width="171px"/>
+                    <img id="h2" src="imagenes/carta2a.png" style="position: absolute; left: 7px; top: 149px; margin-top:800px" width="170px"/>
+                    <img id="h3" src="imagenes/carta3a.png" style="position: absolute; left: 7px; top: 151px; margin-top:800px" width="170px"/>
+                    <img id="h4" src="imagenes/carta4a.png" style="position: absolute; left: 7px; top: 148px; margin-top:800px" width="173px"/>
+                    <img id="h5" src="imagenes/carta5a.png" style="position: absolute; left: 7px; top: 143px; margin-top:800px" width="170px"/>
+                    <img id="h6" src="imagenes/carta6a.png" style="position: absolute; left: 7px; top: 160px; margin-top:800px" width="167px"/>
+                    
+                    <script>
+                    	$('#h1').animate({rotate:'5deg'}, 0)
+						$('#h2').animate({rotate:'-2deg'}, 0)
+						$('#h3').animate({rotate:'7deg'}, 0)
+						$('#h4').animate({rotate:'11deg'}, 0)
+						$('#h5').animate({rotate:'-6deg'}, 0)
+						$('#h6').animate({rotate:'-5deg'}, 0)
+                    </script>
+                    
+                    
+                  <div style="position: absolute; width: 221px; height: 64px; color: #FFF9F9; background: #D13239; text-align: center; line-height: 64px; font-size: 30px; font-family: berLi; left: -28px; top: 9px;">
+                  	<span id="pares">0</span>/6 pares
+                  </div>
+  </div>
+  
+  <div style="position: absolute; top: 110px; left: 1006px; color: #D13239; font-size: 24px; width: 155px;">Instrucciones</div>
+  <div style="position: absolute; top: 147px; left: 1006px; background: #D13239; font-size: 24px; width: 145px; height: 1px;"></div>
+  <div style="position: absolute; top: 157px; left: 1006px; color: #2B2B2B; font-size: 18px; width: 166px; text-align: justify">Forma las parejas de imágenes y arrástralas fuera del tablero.<br><br>¡Completa los 6 pares y gana!</div>
+            
+            <div id="cc1" style="position: absolute; width: 131px; height: 183px; left: 370px; top: 111px;">
+       	    	<img id="at1" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta1" src="imagenes/carta1.png" style="position:absolute; display:none" width="131" height="183"/> 
+            </div>
+            
+            <div id="cc1a" style="position: absolute; width: 131px; height: 183px; left: 520px; top: 111px;">
+       	    	<img id="at1a" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta1a" src="imagenes/carta1.png" style="position:absolute; display:none" width="131" height="183"/>
+            </div>
+            
+            <div id="cc2" style="position: absolute; width: 131px; height: 183px; left: 670px; top: 111px;">
+       	    	<img id="at2" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta2" src="imagenes/carta2.png" style="position:absolute; display:none" width="131" height="183"/> 
+            </div>
+            
+            <div id="cc2a" style="position: absolute; width: 131px; height: 183px; left: 820px; top: 111px;">
+       	    	<img id="at2a" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta2a" src="imagenes/carta2.png" style="position:absolute; display:none" width="131" height="183"/>
+            </div>
+            
+            <div id="cc3" style="position: absolute; width: 131px; height: 183px; left: 370px; top: 311px;">
+       	    	<img id="at3" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta3" src="imagenes/carta3.png" style="position:absolute; display:none" width="131" height="183"/> 
+            </div>
+            
+            <div id="cc3a" style="position: absolute; width: 131px; height: 183px; left: 520px; top: 311px;">
+       	    	<img id="at3a" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta3a" src="imagenes/carta3.png" style="position:absolute; display:none" width="131" height="183"/>
+            </div>
+            
+  			<div id="cc4" style="position: absolute; width: 131px; height: 183px; left: 670px; top: 311px;">
+       	    	<img id="at4" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta4" src="imagenes/carta4.png" style="position:absolute; display:none" width="131" height="183"/> 
+            </div>
+            
+  			<div id="cc4a" style="position: absolute; width: 131px; height: 183px; left: 820px; top: 311px;">
+       	    	<img id="at4a" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta4a" src="imagenes/carta4.png" style="position:absolute; display:none" width="131" height="183"/>
+            </div>
+            
+            
+  			<div id="cc5" style="position: absolute; width: 131px; height: 183px; left: 370px; top: 511px;">
+       	    	<img id="at5" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta5" src="imagenes/carta5.png" style="position:absolute; display:none" width="131" height="183"/> 
+            </div>
+            
+  			<div id="cc5a" style="position: absolute; width: 131px; height: 183px; left: 520px; top: 511px;">
+       	    	<img id="at5a" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta5a" src="imagenes/carta5.png" style="position:absolute; display:none" width="131" height="183"/>
+            </div>
+            
+  			<div id="cc6" style="position: absolute; width: 131px; height: 183px; left: 670px; top: 511px;">
+       	    	<img id="at6" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta6" src="imagenes/carta6.png" style="position:absolute; display:none" width="131" height="183"/> 
+            </div>
+            
+  			<div id="cc6a" style="position: absolute; width: 131px; height: 183px; left: 820px; top: 511px;">
+       	    	<img id="at6a" src="imagenes/atr.png" style="position:absolute"/>
+                <img id="carta6a" src="imagenes/carta6.png" style="position:absolute; display:none" width="131" height="183"/>
+            </div>
+            
+            
+            <div id="bloo" style="position: absolute; width: 618px; height: 616px; left: 352px; top: 96px; display:none"></div>
+            
+            <img id="gan" src="imagenes/gan.png" style="position: absolute; left: 39px; top: 58px; display:none; z-index:20000"/>
+            
+            <script>
+			
+			
+			
+			var vol=0
+			var ca1=0
+			var ca2=0
+			var ca3=0
+			var ca4=0
+			var ca5=0
+			var ca6=0
+			var ca1a=0
+			var ca2a=0
+			var ca3a=0
+			var ca4a=0
+			var ca5a=0
+			var ca6a=0
+			var par= 0
+			
+            	$('#cc1').click(function(){
+					if(ca1==0){
+						$('#cc1').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta1').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca1=1
+					}
+				})
+				
+				$('#cc1a').click(function(){
+					if(ca1a==0){
+						$('#cc1a').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta1a').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca1a=1
+					}
+				})
+				
+				$('#cc2').click(function(){
+					if(ca2==0){
+						$('#cc2').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta2').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca2=1
+					}
+				})
+				
+				$('#cc2a').click(function(){
+					if(ca2a==0){
+						$('#cc2a').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta2a').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca2a=1
+					}
+				})
+				
+				$('#cc3').click(function(){
+					if(ca3==0){
+						$('#cc3').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta3').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca3=1
+					}
+				})
+				
+				$('#cc3a').click(function(){
+					if(ca3a==0){
+						$('#cc3a').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta3a').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca3a=1
+					}
+				})
+				
+				$('#cc4').click(function(){
+					if(ca4==0){
+						$('#cc4').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta4').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca4=1
+					}
+				})
+				
+				$('#cc4a').click(function(){
+					if(ca4a==0){
+						$('#cc4a').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta4a').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca4a=1
+					}
+				})
+				
+				$('#cc5').click(function(){
+					if(ca5==0){
+						$('#cc5').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta5').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca5=1
+					}
+				})
+				
+				$('#cc5a').click(function(){
+					if(ca5a==0){
+						$('#cc5a').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta5a').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca5a=1
+					}
+				})
+				
+				$('#cc6').click(function(){
+					if(ca6==0){
+						$('#cc6').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta6').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca6=1
+					}
+				})
+				
+				$('#cc6a').click(function(){
+					if(ca6a==0){
+						$('#cc6a').transition({perspective: '500px', rotateY: '180deg'}, 800)
+						$('#carta6a').delay(200).fadeIn(0)
+						if(vol==0){
+							vol=1
+						}else if(vol==1){
+							$('#bloo').show()
+							$('#bloo').delay(2800).fadeOut(0)
+							vol=0
+							setTimeout('regresa()', 2000)
+						}
+						ca6a=1
+					}
+				})
+				
+				
+				var zi=1
+				
+				function regresa(){
+					$('#cc1, #cc2, #cc3, #cc4, #cc5, #cc6, #cc1a, #cc2a, #cc3a, #cc4a, #cc5a, #cc6a').transition({perspective: '500px', rotateY: '0deg'}, 800)
+					$('#carta1, #carta2, #carta3, #carta4, #carta5, #carta6, #carta1a, #carta2a, #carta3a, #carta4a, #carta5a, #carta6a').delay(200).fadeOut(0)
+					
+					if(ca1==1 && ca1a==1){
+						$('#h1').animate({marginTop:'0px'}, 1400)
+						zi++
+						$('#h1').css('z-index', zi)
+						
+						$('#cc1, #cc1a').css('opacity','.4')	
+						par++
+						$('#pares').html(par)
+						ca1=2
+						ca1a=2
+						
+					}else{
+						if(ca1!=2 && ca1a!=2){
+							ca1=0
+							ca1a=0
+						}
+					}
+					
+					if(ca2==1 && ca2a==1){
+						$('#h2').animate({marginTop:'0px'}, 1400)
+						zi++
+						$('#h2').css('z-index', zi)
+						
+						$('#cc2, #cc2a').css('opacity','.4')	
+						par++
+						$('#pares').html(par)
+						ca2=2
+						ca2a=2
+					}else{
+						if(ca2!=2 && ca2a!=2){
+							ca2=0
+							ca2a=0
+						}
+					}
+					
+					if(ca3==1 && ca3a==1){
+						$('#h3').animate({marginTop:'0px'}, 1400)
+						zi++
+						$('#h3').css('z-index', zi)
+						
+						$('#cc3, #cc3a').css('opacity','.4')	
+						par++
+						$('#pares').html(par)
+						ca3=2
+						ca3a=2
+					}else{
+						if(ca3!=2 && ca3a!=2){
+							ca3=0
+							ca3a=0
+						}
+					}
+					
+					if(ca4==1 && ca4a==1){
+						$('#h4').animate({marginTop:'0px'}, 1400)
+						zi++
+						$('#h4').css('z-index', zi)
+						
+						$('#cc4, #cc4a').css('opacity','.4')	
+						par++
+						$('#pares').html(par)
+						ca4=2
+						ca4a=2
+					}else{
+						if(ca4!=2 && ca4a!=2){
+							ca4=0
+							ca4a=0
+						}
+					}
+					
+					if(ca5==1 && ca5a==1){
+						$('#h5').animate({marginTop:'0px'}, 1400)
+						zi++
+						$('#h5').css('z-index', zi)
+						
+						$('#cc5, #cc5a').css('opacity','.4')	
+						par++
+						$('#pares').html(par)
+						ca5=2
+						ca5a=2
+					}else{
+						if(ca5!=2 && ca5a!=2){
+							ca5=0
+							ca5a=0
+						}
+					}
+					
+					if(ca6==1 && ca6a==1){
+						$('#h6').animate({marginTop:'0px'}, 1400)
+						zi++
+						$('#h6').css('z-index', zi)
+						
+						$('#cc6, #cc6a').css('opacity','.4')	
+						par++
+						$('#pares').html(par)
+						ca6=2
+						ca6a=2
+					}else{
+						if(ca6!=2 && ca6a!=2){
+							ca6=0
+							ca6a=0
+						}
+					}
+					
+					if(ca1==2 && ca1a==2 && ca2==2 && ca2a==2 && ca3==2 && ca3a==2 && ca4==2 && ca4a==2 && ca5==2 && ca5a==2 && ca6==2 && ca6a==2){
+						$('#gan').delay(1500).fadeIn(800)
+						$('#gan').delay(1500).fadeOut(800)
+						
+						
+						$('#cc1, #cc1a, #cc2, #cc2a, #cc3, #cc3a, #cc4, #cc4a, #cc5, #cc5a, #cc6, #cc6a').delay(4000).animate({opacity:'1'}, 800)
+						
+						vol=0
+						ca1=0
+						ca2=0
+						ca3=0
+						ca4=0
+						ca5=0
+						ca6=0
+						ca1a=0
+						ca2a=0
+						ca3a=0
+						ca4a=0
+						ca5a=0
+						ca6a=0
+						par= 0
+						
+						$('#pares').html(par)
+						
+						$('#h1').stop().delay(3800).animate({marginTop:'800px'}, 1400)
+						$('#h2').stop().delay(4000).animate({marginTop:'800px'}, 1400)
+						$('#h3').stop().delay(4200).animate({marginTop:'800px'}, 1400)
+						$('#h4').stop().delay(4400).animate({marginTop:'800px'}, 1400)
+						$('#h5').stop().delay(4600).animate({marginTop:'800px'}, 1400)
+						$('#h6').stop().delay(4800).animate({marginTop:'800px'}, 1400)
+						
+						desacomodar()
+					}
+				}
+				
+				desacomodar()
+				
+				function desacomodar(){
+				
+					var num = Math.round(Math.random() * (4 - 1) + 1);
+			
+					if(num==1){
+						$('#cc3').css('left','370px')
+						$('#cc3').css('top','111px')
+						$('#cc6').css('left','520px')
+						$('#cc6').css('top','111px')
+						$('#cc2').css('left','670px')
+						$('#cc2').css('top','111px')
+						$('#cc4').css('left','820px')
+						$('#cc4').css('top','111px')
+						$('#cc1').css('left','370px')
+						$('#cc1').css('top','311px')
+						$('#cc5').css('left','520px')
+						$('#cc5').css('top','311px')
+						$('#cc2a').css('left','670px')
+						$('#cc2a').css('top','311px')
+						$('#cc4a').css('left','820px')
+						$('#cc4a').css('top','311px')
+						$('#cc3a').css('left','370px')
+						$('#cc3a').css('top','511px')
+						$('#cc5a').css('left','520px')
+						$('#cc5a').css('top','511px')
+						$('#cc1a').css('left','670px')
+						$('#cc1a').css('top','511px')
+						$('#cc6a').css('left','820px')
+						$('#cc6a').css('top','511px')
+					}else if(num==2){
+						$('#cc6').css('left','370px')
+						$('#cc6').css('top','111px')
+						$('#cc3').css('left','520px')
+						$('#cc3').css('top','111px')
+						$('#cc2').css('left','670px')
+						$('#cc2').css('top','111px')
+						$('#cc5a').css('left','820px')
+						$('#cc5a').css('top','111px')
+						$('#cc1a').css('left','370px')
+						$('#cc1a').css('top','311px')
+						$('#cc3a').css('left','520px')
+						$('#cc3a').css('top','311px')
+						$('#cc1').css('left','670px')
+						$('#cc1').css('top','311px')
+						$('#cc4a').css('left','820px')
+						$('#cc4a').css('top','311px')
+						$('#cc6a').css('left','370px')
+						$('#cc6a').css('top','511px')
+						$('#cc2a').css('left','520px')
+						$('#cc2a').css('top','511px')
+						$('#cc4').css('left','670px')
+						$('#cc4').css('top','511px')
+						$('#cc5').css('left','820px')
+						$('#cc5').css('top','511px')
+					}else if(num==3){
+						$('#cc5').css('left','370px')
+						$('#cc5').css('top','111px')
+						$('#cc3a').css('left','520px')
+						$('#cc3a').css('top','111px')
+						$('#cc4a').css('left','670px')
+						$('#cc4a').css('top','111px')
+						$('#cc2a').css('left','820px')
+						$('#cc2a').css('top','111px')
+						$('#cc3').css('left','370px')
+						$('#cc3').css('top','311px')
+						$('#cc1a').css('left','520px')
+						$('#cc1a').css('top','311px')
+						$('#cc4').css('left','670px')
+						$('#cc4').css('top','311px')
+						$('#cc6').css('left','820px')
+						$('#cc6').css('top','311px')
+						$('#cc1').css('left','370px')
+						$('#cc1').css('top','511px')
+						$('#cc5a').css('left','520px')
+						$('#cc5a').css('top','511px')
+						$('#cc6a').css('left','670px')
+						$('#cc6a').css('top','511px')
+						$('#cc2').css('left','820px')
+						$('#cc2').css('top','511px')
+					}else if(num==4){
+						$('#cc2a').css('left','370px')
+						$('#cc2a').css('top','111px')
+						$('#cc1a').css('left','520px')
+						$('#cc1a').css('top','111px')
+						$('#cc3').css('left','670px')
+						$('#cc3').css('top','111px')
+						$('#cc1').css('left','820px')
+						$('#cc1').css('top','111px')
+						$('#cc2').css('left','370px')
+						$('#cc2').css('top','311px')
+						$('#cc3a').css('left','520px')
+						$('#cc3a').css('top','311px')
+						$('#cc6').css('left','670px')
+						$('#cc6').css('top','311px')
+						$('#cc4a').css('left','820px')
+						$('#cc4a').css('top','311px')
+						$('#cc6a').css('left','370px')
+						$('#cc6a').css('top','511px')
+						$('#cc5a').css('left','520px')
+						$('#cc5a').css('top','511px')
+						$('#cc4').css('left','670px')
+						$('#cc4').css('top','511px')
+						$('#cc5').css('left','820px')
+						$('#cc5').css('top','511px')
+					}
+	
+				}
+				
+				
+				
+				$('#reg2').click(function(){
+					
+						regresa()
+					
+						$('#p2').fadeIn(600)
+						$('#p4').fadeOut(600)
+					
+						
+						
+						
+						$('#cc1, #cc1a, #cc2, #cc2a, #cc3, #cc3a, #cc4, #cc4a, #cc5, #cc5a, #cc6, #cc6a').animate({opacity:'1'}, 800)
+						
+						vol=0
+						ca1=0
+						ca2=0
+						ca3=0
+						ca4=0
+						ca5=0
+						ca6=0
+						ca1a=0
+						ca2a=0
+						ca3a=0
+						ca4a=0
+						ca5a=0
+						ca6a=0
+						par= 0
+						
+						$('#pares').html(par)
+						
+						$('#h1').stop().delay(3800).animate({marginTop:'800px'}, 1400)
+						$('#h2').stop().delay(4000).animate({marginTop:'800px'}, 1400)
+						$('#h3').stop().delay(4200).animate({marginTop:'800px'}, 1400)
+						$('#h4').stop().delay(4400).animate({marginTop:'800px'}, 1400)
+						$('#h5').stop().delay(4600).animate({marginTop:'800px'}, 1400)
+						$('#h6').stop().delay(4800).animate({marginTop:'800px'}, 1400)
+						
+						setTimeout('desacomodar()', 800)
+					
+				})
+				
+            </script>
+</div>
+            
+
+            
+</body>
+</html>
+
